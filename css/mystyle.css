@@ -6,3 +6,15 @@ Body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family: 'Noto 
     background-color:#495057;
     color:#fff;
 }
+:root { 
+    --bs-primary: #a17868;
+}
+span{
+    text-transform: none
+}
+body{
+    background-color: #FFFFE0;
+}
+h1{
+    color:#8B4513;
+}
