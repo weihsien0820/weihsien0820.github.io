@@ -4,7 +4,10 @@ Body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-family: 'Noto 
 }
 .expedu_icon:hover{
     background-color:#495057;
-    color:#fff;
+    color: var(--bs-secondary);
+}
+a{
+    color: var(--bs-primary);
 }
 :root { 
     --bs-primary: #a17868;
