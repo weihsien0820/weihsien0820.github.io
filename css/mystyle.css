@@ -24,3 +24,11 @@ h1{
 div{
     color:#a17868;
 }
+/* 讓滑動箭頭在淺色背景上清晰可見 */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    /* 將箭頭圖標顏色改為深色，例如黑色 */
+    filter: invert(100%); 
+    /* 或者使用特定的顏色，例如: background-image: url("data:image/svg+xml;..."); */
+    /* 這裡使用 filter: invert(100%) 最簡單，確保在淺色背景下為深色 */
+}
