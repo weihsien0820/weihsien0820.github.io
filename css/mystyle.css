@@ -24,11 +24,24 @@ h1{
 div{
     color:#a17868;
 }
-/* 讓滑動箭頭在淺色背景上清晰可見 */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    /* 將箭頭圖標顏色改為深色，例如黑色 */
-    filter: invert(100%); 
-    /* 或者使用特定的顏色，例如: background-image: url("data:image/svg+xml;..."); */
-    /* 這裡使用 filter: invert(100%) 最簡單，確保在淺色背景下為深色 */
+/* 調整作品卡片的樣式 */
+.portfolio-item {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.portfolio-item:hover {
+    transform: translateY(-5px); /* 鼠標懸停時略微上浮 */
+    box-shadow: 0 10px 20px rgba(0,0,0,.15) !important; /* 增加陰影效果 */
+}
+.portfolio-img-container {
+    /* 如果你決定用圖片，移除 background-color 並確保圖片垂直置中 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* 確保圖片超出容器時被裁剪 */
+}
+.portfolio-img-container img {
+    /* 如果圖片較小，可以設定更大的最大高度 */
+    max-height: 100%; 
+    width: auto; 
+    object-fit: contain; /* 確保圖片不變形地適應容器 */
 }
