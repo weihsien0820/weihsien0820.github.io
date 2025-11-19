@@ -45,3 +45,9 @@ div{
     width: auto; 
     object-fit: contain; /* 確保圖片不變形地適應容器 */
 }
+/* 確保簡介區塊中的第四個元素 (address) 不換行 */
+#about .social-icons + div {
+    white-space: nowrap; /* 強制文字不換行 */
+    overflow: hidden;    /* 隱藏超出容器的文字 */
+    text-overflow: ellipsis; /* 超出部分顯示省略號 */
+}
