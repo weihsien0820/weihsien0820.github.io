@@ -51,3 +51,38 @@ div{
     overflow: hidden;    /* 隱藏超出容器的文字 */
     text-overflow: ellipsis; /* 超出部分顯示省略號 */
 }
+/* Portofolio 區塊：水平滾動設置 */
+.horizontal-scroll-container {
+    /* 啟用水平滾動 */
+    overflow-x: auto; 
+    /* 隱藏預設的垂直滾動條 */
+    overflow-y: hidden; 
+    /* 讓容器內的 row 不會換行 */
+    white-space: nowrap; 
+    /* 讓滾動更平滑（選用） */
+    scroll-behavior: smooth;
+    /* 讓所有作品靠左對齊 */
+    text-align: left; 
+    /* 隱藏滾動條，讓設計更簡潔（僅適用於 Webkit 核心瀏覽器，如 Chrome/Safari） */
+    -webkit-overflow-scrolling: touch; /* 讓 iOS 上的滑動更流暢 */
+}
+
+/* 確保 Bootstrap 的 row 內容不會換行，這是水平滾動的另一個關鍵 */
+.horizontal-scroll-container .row {
+    flex-wrap: nowrap;
+}
+
+/* 針對作品卡片，確保它們正確縮小 */
+.horizontal-scroll-container .col-lg-3 {
+    /* 強制卡片不要被擠壓 */
+    flex: 0 0 auto; 
+    /* 調整寬度，確保一屏可以顯示 3 個半或 4 個卡片 */
+    width: 320px; /* 例如，你可以設定一個固定寬度 */
+}
+
+/* 針對手機螢幕，調整卡片寬度讓一屏至少顯示 1.5 個 */
+@media (max-width: 768px) {
+    .horizontal-scroll-container .col-sm-6 {
+        width: 75%; /* 讓手機上可以看到下一個作品的一部分 */
+    }
+}
