@@ -24,10 +24,6 @@ h1{
 div{
     color:#a17868;
 }
-/* 調整作品卡片的樣式 */
-.portfolio-item {
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
-}
 .portfolio-img-container {
     /* 如果你決定用圖片，移除 background-color 並確保圖片垂直置中 */
     display: flex;
@@ -83,24 +79,11 @@ div{
     }
 }
 /* 讓作品卡片在懸停時上浮的 CSS */
-
-/* 1. 定義卡片的基本樣式和過渡效果 */
+/* 調整作品卡片的樣式 - 合併後的單一版本 */
 .portfolio-item {
-    /* 確保所有變化的過程是平滑的 */
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
-    cursor: pointer; /* 讓鼠標變成小手，增加互動提示 */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
 }
-
-/* 2. 定義滑鼠懸停 (hover) 時的樣式 */
-.portfolio-item:hover {
-    /* 向上輕微移動 5 像素 */
-    transform: translateY(-5px);
-    
-    /* 增加陰影，製造上浮的視覺效果 */
-    /* 陰影參數: X軸偏移 Y軸偏移 模糊距離 擴散距離 顏色 */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.15); 
-}
-
 /* 確保整個父級容器在懸停時不會影響滾動容器的寬度 */
 /* 這一行通常不需要，但作為額外安全措施，可以保留 */
 .horizontal-scroll-container .col-lg-3:hover {
